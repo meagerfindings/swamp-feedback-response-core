@@ -1,0 +1,22 @@
+{
+  "extension": "@mgreten/feedback-response-core",
+  "version": "2026.08.23.1",
+  "reviewedAt": "2026-08-23T19:42:00Z",
+  "dimensions": [
+    { "id": "credentials-secrets", "verdict": "na", "note": "No credentials, global configuration, providers, or network integrations." },
+    { "id": "logging-quality", "verdict": "pass", "note": "The sole method logs structured entry and successful stored or replay completion without feedback content." },
+    { "id": "error-handling", "verdict": "pass", "note": "Contract, privacy, and replay validation precede the sole write; read and write failures propagate without authority or success output." },
+    { "id": "testing-completeness", "verdict": "pass", "note": "Synthetic success, privacy rejection, deterministic output, tamper, malformed input, failure, no-authority surface, and idempotent/conflicting replay are tested." },
+    { "id": "idempotency-resilience", "verdict": "pass", "note": "Exact response replay performs no write; changed content under the same response ID is rejected before persistence." },
+    { "id": "api-contracts", "verdict": "na", "note": "No external API, HTTP, command, route, or provider contract exists." },
+    { "id": "resource-management", "verdict": "na", "note": "No external resources, files, connections, publish/send operations, or closure capability exist." },
+    { "id": "published-surface-hygiene", "verdict": "pass", "note": "README and source use generic synthetic identifiers and state redaction limitations and human-review boundaries." },
+    { "id": "schema-strictness", "verdict": "pass", "note": "All input, nested, decision, and output objects are strict; cross-field provenance, timing, redaction, praise, and draft-disposition invariants are enforced." },
+    { "id": "lifetime-gc", "verdict": "pass", "note": "The immutable response packet explicitly declares infinite lifetime and garbage collection retention." },
+    { "id": "crud-completeness", "verdict": "na", "note": "This is a single immutable classify-and-draft computation, not a remote CRUD lifecycle." },
+    { "id": "preflight-checks", "verdict": "na", "note": "The method has no external mutation; strict validation and replay checks gate its local persistence write." },
+    { "id": "instance-names", "verdict": "pass", "note": "The only write targets the response spec under the validated response ID; no cross-spec collision is possible." },
+    { "id": "data-access", "verdict": "pass", "note": "Existing replay state is accessed only through readResource." },
+    { "id": "version-upgrades", "verdict": "na", "note": "This is the initial standalone model version with no prior persisted schema to migrate." }
+  ]
+}
